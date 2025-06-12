@@ -1,0 +1,173 @@
+/* GharPadharo Career Portal Styles */
+:root {
+  --gharpadhaaro-blue: #0866ff;
+  --gharpadhaaro-blue-dark: #0756d6;
+  --gharpadhaaro-gray: #f0f2f5;
+  --gharpadhaaro-text: #1c1e21;
+  --gharpadhaaro-text-secondary: #65676b;
+  --gharpadhaaro-white: #ffffff;
+  --gharpadhaaro-border: #dadde1;
+  --gharpadhaaro-success: #42b72a;
+  --gharpadhaaro-error: #fa383e;
+  --gharpadhaaro-shadow: rgba(0, 0, 0, 0.1);
+  --gharpadhaaro-radius: 8px;
+  --gharpadhaaro-transition: all 0.2s ease;
+}
+
+/* Global Styles */
+.career-portal {
+  font-family: 'Optimistic Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--gharpadhaaro-text);
+  line-height: 1.5;
+  background-color: var(--gharpadhaaro-white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #0866ff 0%, #00d2ff 100%);
+  color: var(--meta-white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  color: black;
+  font-size: 20px;
+  margin-bottom: 40px;
+  margin-left: 70px;
+
+}
+
+/* Job Search Section */
+.job-search-section {
+  padding: 60px 0;
+  background-color: var(--meta-white);
+}
+
+.filters-and-results {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+}
+
+/* Featured Teams Section */
+.featured-teams-section {
+  padding: 80px 0;
+  background-color: var(--meta-gray);
+}
+
+.featured-teams-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.featured-teams-section p {
+  font-size: 18px;
+  color: var(--meta-text-secondary);
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: var(--meta-radius);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: var(--meta-transition);
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--meta-blue);
+  color: var(--meta-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--meta-blue-dark);
+}
+
+.btn-secondary {
+  background-color: var(--meta-gray);
+  color: var(--meta-text);
+}
+
+.btn-secondary:hover {
+  background-color: #e4e6eb;
+}
+
+/* Form Elements */
+.input-group {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--meta-radius);
+  border: 1px solid var(--meta-border);
+  font-size: 16px;
+  transition: var(--meta-transition);
+}
+
+.input-field:focus {
+  border-color: var(--meta-blue);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(8, 102, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .filters-and-results {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-content h1 {
+    font-size: 36px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+  
+  .hero-content p {
+    font-size: 16px;
+  }
+  
+  .featured-teams-section h2 {
+    font-size: 28px;
+  }
+}
