@@ -43,6 +43,19 @@ const Footer = () => {
           </div>
           
           <div className="footer-section">
+            <div className="footer-section">
+              <h4>Connect</h4>
+              <ul>
+                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="footer-section">
             <h4>Stay Updated</h4>
             <p>Subscribe to our newsletter for the latest job openings and career tips.</p>
             <form className="newsletter-form">

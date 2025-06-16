@@ -1,7 +1,7 @@
 /* Auth.css - Styles for Login and Signup components */
 
 :root {
-  --primary-color: #1877F2; /* Meta blue */
+  --primary-color: #535699; /* Meta blue */
   --secondary-color: #42B72A; /* Meta green */
   --text-color: #1C1E21;
   --light-text: #606770;
@@ -81,7 +81,7 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: var(--primary-color);
+  border-color: #535699;
   box-shadow: var(--focus-shadow);
 }
 
@@ -114,7 +114,7 @@
 
 /* Auth Button */
 .auth-button {
-  background-color: var(--primary-color);
+  background-color: #535699;
   color: white;
   border: none;
   border-radius: 6px;
@@ -127,7 +127,7 @@
 }
 
 .auth-button:hover {
-  background-color: #166FE5;
+  background-color: #535699;
 }
 
 /* Auth Footer */
@@ -137,7 +137,7 @@
 }
 
 .forgot-password {
-  color: var(--primary-color);
+  color: #535699;
   text-decoration: none;
   font-size: 14px;
   display: block;
@@ -155,7 +155,7 @@
 }
 
 .auth-redirect a {
-  color: var(--primary-color);
+  color: #535699;
   text-decoration: none;
   font-weight: 500;
 }
