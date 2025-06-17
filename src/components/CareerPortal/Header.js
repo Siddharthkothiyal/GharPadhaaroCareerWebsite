@@ -21,27 +21,6 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* <nav className={`main-nav ${isMenuOpen ? 'active' : ''} nav-items`}>
-            <ul>
-              <li><Link to="/teams">Teams</Link></li>
-              <li className='nav-item'>
-                <span className="nav-link">
-                  Jobs <i class="fa-solid fa-angle-down"></i>
-                </span>
-                <div className="dropdown">
-                  <Link to="/jobs/engineering">Engineering</Link>
-                  <Link to="/jobs/design">Design</Link>
-                  <Link to="/jobs/product">Product</Link>
-                </div>
-              </li>
-              <li><Link to="/locations">Locations</Link></li>
-              <li><Link to="/students">Students</Link></li>
-              <li><Link to="/life-at-gharpadhaaro">Life at GharPadhaaro</Link></li>
-              <li><Link to="/about">About</Link></li>
-            </ul>
-          </nav> */}
-
-
         <nav className={`main-nav ${isMenuOpen ? 'active' : ''} nav-items`}>
           <ul>
             <li className='nav-item'>
@@ -115,6 +94,7 @@ const Header = () => {
                 <Link to="/students/faqs">FAQs for Students</Link>
               </div>
             </li>
+
             <li className='nav-item'>
               <span className="nav-link">
                 Life at GharPadhaaro <i className="fa-solid fa-angle-down"></i>
@@ -132,6 +112,7 @@ const Header = () => {
                 <Link to="/life-at-gharpadhaaro/blogs">Team Blogs</Link>
               </div>
             </li>
+
             <li className='nav-item'>
               <span className="nav-link">
                 About <i className="fa-solid fa-angle-down"></i>
@@ -149,7 +130,6 @@ const Header = () => {
 
           </ul>
         </nav>
-
 
         <div className="header-actions">
           <Link to="/login" className="btn btn-secondary">Sign In</Link>
