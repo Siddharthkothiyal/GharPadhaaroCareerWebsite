@@ -1,8 +1,8 @@
 /* Auth.css - Styles for Login and Signup components */
 
 :root {
-  --primary-color: #1877F2; /* Meta blue */
-  --secondary-color: #42B72A; /* Meta green */
+  --primary-color: #535699; /* GharPadharo blue */
+  --secondary-color: #42B72A; /* GharPadharo green */
   --text-color: #1C1E21;
   --light-text: #606770;
   --error-color: #FA383E;
@@ -10,7 +10,7 @@
   --background-color: #F0F2F5;
   --card-background: #FFFFFF;
   --hover-color: #E7F3FF;
-  --focus-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+  --focus-shadow: 0 0 0 2px rgba(83, 86, 153, 0.2);
 }
 
 /* Auth Container */
@@ -86,7 +86,7 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: var(--primary-color);
+  border-color: #535699;
   box-shadow: var(--focus-shadow);
 }
 
@@ -103,13 +103,13 @@
 /* Terms and Privacy */
 .terms-privacy {
   font-size: 12px;
-  color: var(--light-text);
+  color: 535699;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .terms-privacy a {
-  color: var(--primary-color);
+  color: 535699;
   text-decoration: none;
 }
 
@@ -119,7 +119,7 @@
 
 /* Auth Button */
 .auth-button {
-  background-color: var(--primary-color);
+  background-color: #535699;
   color: white;
   border: none;
   border-radius: 6px;
@@ -132,7 +132,7 @@
 }
 
 .auth-button:hover {
-  background-color: #166FE5;
+  background-color: #535699;
 }
 
 /* Auth Footer */
@@ -142,7 +142,7 @@
 }
 
 .forgot-password {
-  color: var(--primary-color);
+  color: #535699;
   text-decoration: none;
   font-size: 14px;
   display: block;
@@ -160,7 +160,7 @@
 }
 
 .auth-redirect a {
-  color: var(--primary-color);
+  color: #535699;
   text-decoration: none;
   font-weight: 500;
 }

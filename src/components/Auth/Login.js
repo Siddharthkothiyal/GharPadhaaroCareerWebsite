@@ -62,8 +62,11 @@ const Login = () => {
     <div className="auth-container">
       <div className="auth-card">
         <div className="auth-header">
-          <img src='logo.webp' alt='sorry , the image can not be loaded' className='gharpadharo-logo' />
-          <h2>Log in to Ghar Padharo Careers</h2>
+        <Link to="/" className='auth-logo'>
+              <img src="/Logo.ghar.jpg" alt="GharPadharo Logo"
+               width="40" height="40" />
+            </Link>
+          <h2>Log in to GharPadharo Careers</h2>
         </div>
 
         <form onSubmit={handleSubmit} className="auth-form">
