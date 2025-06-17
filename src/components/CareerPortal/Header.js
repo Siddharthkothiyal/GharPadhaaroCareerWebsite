@@ -19,7 +19,7 @@ const Header = () => {
               <span>GharPadharo</span>
             </Link>
           </div>
-          
+
           <nav className={`main-nav ${isMenuOpen ? 'active' : ''}`}>
             <ul>
               <li><Link to="/teams">Teams</Link></li>
@@ -29,16 +29,17 @@ const Header = () => {
               <li><Link to="/about">About</Link></li>
             </ul>
           </nav>
-          
+
           <div className="header-actions">
             <Link to="/login" className="btn btn-secondary">Sign In</Link>
             <Link to="" className="btn btn-primary">Upload Resume</Link>
-            
-            <button className="mobile-menu-toggle" onClick={toggleMenu}>
+
+            {/* <button className="mobile-menu-toggle" onClick={toggleMenu}>
               <span className="bar"></span>
               <span className="bar"></span>
               <span className="bar"></span>
-            </button>
+            </button> */}
+            <i className="fa-solid fa-bars mobile-menu-toggle" onClick={toggleMenu}></i>
           </div>
         </div>
       </div>
