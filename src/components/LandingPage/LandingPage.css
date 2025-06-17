@@ -5,6 +5,11 @@
   --secondary-color: #42B72A; /* GharPadharo green */
   --text-color: #1C1E21;
   --light-text: #606770;
+  --border-color: #DADDE1;
+  --background-color: #F0F2F5;
+  --card-background: #FFFFFF;
+  --hover-color: #c8e4ff;
+  --focus-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
   --border-color: #blue;
   --background-color: #535699;
   --card-background: white;

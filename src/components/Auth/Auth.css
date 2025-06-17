@@ -52,6 +52,11 @@
   margin: 0;
 }
 
+.gharpadharo-logo{
+  width: 60px;
+  height: 60px;
+}
+
 /* Auth Form */
 .auth-form {
   display: flex;
