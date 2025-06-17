@@ -21,13 +21,9 @@ const LandingPage = () => {
           </div>
           <div className="hero-image">
             <div className="image-placeholder">
-              <svg width="300" height="250" viewBox="0 0 300 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="300" height="250" rx="8" fill="#E4E6EB" />
-                <path d="M150 125C167.673 125 182 110.673 182 93C182 75.3269 167.673 61 150 61C132.327 61 118 75.3269 118 93C118 110.673 132.327 125 150 125Z" fill="#1877F2" />
-                <rect x="85" y="140" width="130" height="65" rx="8" fill="#1877F2" opacity="0.7" />
-                <path d="M150 170C150 170 120 170 120 140" stroke="white" strokeWidth="4" strokeLinecap="round" />
-                <path d="M150 170C150 170 180 170 180 140" stroke="white" strokeWidth="4" strokeLinecap="round" />
-              </svg>
+              <img src="/photoFOUNDERS.jpg" 
+              className="auth-logo" alt="GharPadharo Logo"
+               width="40" height="40" />
             </div>
           </div>
         </div>
@@ -42,8 +38,8 @@ const LandingPage = () => {
               <div className="feature-icon">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="50" height="50" rx="25" fill="#E7F3FF" />
-                  <path d="M33 25C33 29.4183 29.4183 33 25 33C20.5817 33 17 29.4183 17 25C17 20.5817 20.5817 17 25 17C29.4183 17 33 20.5817 33 25Z" stroke="#1877F2" strokeWidth="2" />
-                  <path d="M25 21V25L28 28" stroke="#1877F2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M33 25C33 29.4183 29.4183 33 25 33C20.5817 33 17 29.4183 17 25C17 20.5817 20.5817 17 25 17C29.4183 17 33 20.5817 33 25Z" stroke="#535699" strokeWidth="2" />
+                  <path d="M25 21V25L28 28" stroke="#535699" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
               <h3>Flexible Work Options</h3>
@@ -53,10 +49,10 @@ const LandingPage = () => {
               <div className="feature-icon">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="50" height="50" rx="25" fill="#E7F3FF" />
-                  <path d="M17 25H33" stroke="#1877F2" strokeWidth="2" strokeLinecap="round" />
-                  <path d="M25 17V33" stroke="#1877F2" strokeWidth="2" strokeLinecap="round" />
-                  <path d="M21 21L29 29" stroke="#1877F2" strokeWidth="2" strokeLinecap="round" />
-                  <path d="M29 21L21 29" stroke="#1877F2" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M17 25H33" stroke="#535699" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M25 17V33" stroke="#535699" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M21 21L29 29" stroke="#535699" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M29 21L21 29" stroke="#535699" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </div>
               <h3>Innovative Projects</h3>
@@ -66,9 +62,9 @@ const LandingPage = () => {
               <div className="feature-icon">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="50" height="50" rx="25" fill="#E7F3FF" />
-                  <path d="M25 17V33" stroke="#1877F2" strokeWidth="2" strokeLinecap="round" />
-                  <path d="M19 23L25 17L31 23" stroke="#1877F2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M19 33H31" stroke="#1877F2" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M25 17V33" stroke="#535699" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M19 23L25 17L31 23" stroke="#535699" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M19 33H31" stroke="#535699" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </div>
               <h3>Career Growth</h3>
@@ -78,8 +74,8 @@ const LandingPage = () => {
               <div className="feature-icon">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="50" height="50" rx="25" fill="#E7F3FF" />
-                  <path d="M20 25C20 22.7909 21.7909 21 24 21H26C28.2091 21 30 22.7909 30 25C30 27.2091 28.2091 29 26 29H24C21.7909 29 20 27.2091 20 25Z" stroke="#1877F2" strokeWidth="2" />
-                  <path d="M25 17V33" stroke="#1877F2" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M20 25C20 22.7909 21.7909 21 24 21H26C28.2091 21 30 22.7909 30 25C30 27.2091 28.2091 29 26 29H24C21.7909 29 20 27.2091 20 25Z" stroke="#535699" strokeWidth="2" />
+                  <path d="M25 17V33" stroke="#535699" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </div>
               <h3>Competitive Benefits</h3>

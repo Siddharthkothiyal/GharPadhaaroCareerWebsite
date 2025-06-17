@@ -1,8 +1,8 @@
 /* Auth.css - Styles for Login and Signup components */
 
 :root {
-  --primary-color: #535699; /* Meta blue */
-  --secondary-color: #42B72A; /* Meta green */
+  --primary-color: #535699; /* GharPadharo blue */
+  --secondary-color: #42B72A; /* GharPadharo green */
   --text-color: #1C1E21;
   --light-text: #606770;
   --error-color: #FA383E;
@@ -10,7 +10,7 @@
   --background-color: #F0F2F5;
   --card-background: #FFFFFF;
   --hover-color: #E7F3FF;
-  --focus-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+  --focus-shadow: 0 0 0 2px rgba(83, 86, 153, 0.2);
 }
 
 /* Auth Container */
@@ -98,13 +98,13 @@
 /* Terms and Privacy */
 .terms-privacy {
   font-size: 12px;
-  color: var(--light-text);
+  color: 535699;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .terms-privacy a {
-  color: var(--primary-color);
+  color: 535699;
   text-decoration: none;
 }
 

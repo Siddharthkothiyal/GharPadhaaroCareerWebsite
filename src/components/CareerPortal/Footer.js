@@ -34,7 +34,6 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Connect</h4>
             <ul>
-              <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
               <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
               <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
               <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
@@ -46,7 +45,6 @@ const Footer = () => {
             <div className="footer-section">
               <h4>Connect</h4>
               <ul>
-                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
                 <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                 <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                 <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>

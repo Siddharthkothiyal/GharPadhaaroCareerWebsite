@@ -1,17 +1,16 @@
 /* LandingPage.css - Styles for the landing page */
 
 :root {
-  --primary-color: #1877F2; /* Meta blue */
-  --secondary-color: #42B72A; /* Meta green */
+  --primary-color: #535699; /* GharPadharo blue */
+  --secondary-color: #42B72A; /* GharPadharo green */
   --text-color: #1C1E21;
   --light-text: #606770;
-  --border-color: #DADDE1;
-  --background-color: #F0F2F5;
-  --card-background: #FFFFFF;
+  --border-color: #blue;
+  --background-color: #535699;
+  --card-background: white;
   --hover-color: #E7F3FF;
-  --focus-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+  --focus-shadow: 0 0 0 2px rgba(83, 86, 153, 0.2);
 }
-
 /* General Styles */
 .landing-page {
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
@@ -69,13 +68,14 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background-color:  #0000FF;
   color: white;
   border: none;
 }
 
 .btn-primary:hover {
-  background-color: #166FE5;
+  background-color: whitesmoke;
+  color: black;
 }
 
 .btn-secondary {
@@ -85,17 +85,19 @@ p {
 }
 
 .btn-secondary:hover {
-  background-color: #36A420;
+  background-color: whitesmoke;
+  color: black;
 }
 
 .btn-outline {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  background-color: white;
+  color: black;
+  border: white;
 }
 
 .btn-outline:hover {
-  background-color: var(--hover-color);
+  background-color: #0000FF;
+  color: black;
 }
 
 /* Hero Section */
@@ -117,7 +119,7 @@ p {
 
 .hero-content p {
   font-size: 1.25rem;
-  color: var(--light-text);
+  color: 535699;
   margin-bottom: 30px;
   max-width: 600px;
 }
@@ -135,13 +137,14 @@ p {
 }
 
 .image-placeholder {
-  background-color: var(--hover-color);
+  background-color: 535699;
   border-radius: 12px;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 /* Features Section */
 .features {
