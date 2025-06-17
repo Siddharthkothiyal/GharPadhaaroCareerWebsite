@@ -56,7 +56,7 @@ const LandingPage = () => {
                 </svg>
               </div>
               <h3>Innovative Projects</h3>
-              <p>Work on cutting-edge technologies that impact billions of people around the world.</p>
+              <p>Work on future-forward tech that drives transformation across global communities.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
@@ -68,7 +68,7 @@ const LandingPage = () => {
                 </svg>
               </div>
               <h3>Career Growth</h3>
-              <p>Access to learning resources, mentorship programs, and clear paths for advancement.</p>
+              <p>We’ve got your back from learning materials to mentors to career growth.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
@@ -94,29 +94,29 @@ const LandingPage = () => {
           </p>
           <div className="teams-carousel">
             <div className="team-item">
-              <h3>Engineering</h3>
-              <p>Build the next generation of technologies that bring people closer together.</p>
+              <h3>Engineering Tea</h3>
+              <p>Build the next generation technologies that bring people closer together.</p>
               <Link to="/careers" className="team-link">
                 View Openings <span>→</span>
               </Link>
             </div>
             <div className="team-item">
               <h3>Product Design</h3>
-              <p>Create intuitive and beautiful experiences that help people connect in meaningful ways.</p>
+              <p>Deliver simple, powerful experiences that foster real human interaction.</p>
               <Link to="/careers" className="team-link">
                 View Openings <span>→</span>
               </Link>
             </div>
             <div className="team-item">
               <h3>Research</h3>
-              <p>Solve complex problems and develop new insights that advance the state of the art.</p>
+              <p>Advance cutting-edge ideas through critical thinking and creative problem-solving.</p>
               <Link to="/careers" className="team-link">
                 View Openings <span>→</span>
               </Link>
             </div>
             <div className="team-item">
               <h3>Data Science</h3>
-              <p>Extract insights from data to inform product decisions and business strategy.</p>
+              <p>Use data to uncover trends, optimize performance, and steer business direction.</p>
               <Link to="/careers" className="team-link">
                 View Openings <span>→</span>
               </Link>
@@ -137,8 +137,8 @@ const LandingPage = () => {
             <div className="testimonial-author">
               <div className="author-avatar"></div>
               <div className="author-info">
-                <h4>Alex Johnson</h4>
-                <p>Senior Software Engineer, 3 years at GharPadharo</p>
+                <h4>Siddharth kumar Kothiyal</h4>
+                <p>Software Engineer, 1 years at GharPadharo</p>
               </div>
             </div>
           </div>
@@ -148,10 +148,11 @@ const LandingPage = () => {
       {/* CTA Section */}
       <section className="cta-section">
         <div className="container">
-          <h2>Ready to Build the Future?</h2>
+          <h2>Together, Let’s Build What Matters.</h2>
           <p>
-            Join our team of talented individuals who are passionate about creating technology that brings the world closer together.
-          </p>
+          We're a team of thinkers, 
+          makers, and doers building tech that brings people together. 
+          If you're ready to make an impact, your future starts here."          </p>
           <div className="cta-buttons">
             <Link to="/signup" className="btn btn-primary">Create Account</Link>
             <Link to="/careers" className="btn btn-secondary">Browse Open Positions</Link>
