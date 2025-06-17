@@ -9,7 +9,7 @@
   display: flex;
   background-color: var(--meta-white);
   border-radius: var(--meta-radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
   overflow: hidden;
 }
 
@@ -52,22 +52,36 @@
   background-color: var(--gharpadhaaro-white);
 }
 
+.searchBtn-div {
+  width: 150px;
+}
+
+.searchBtn {
+  height: 50px;
+  width: 100%;
+  font-size: 15px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .search-container {
     flex-direction: column;
   }
-  
+
   .search-input-group {
     border-right: none;
     border-bottom: 1px solid var(--meta-border);
   }
-  
+
   .search-input-group:last-of-type {
     border-bottom: none;
   }
-  
+
   .search-button {
     padding: 16px;
+  }
+
+  .searchBtn-div {
+    width: 100%;
   }
 }

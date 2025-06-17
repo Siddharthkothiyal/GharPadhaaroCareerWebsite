@@ -1,18 +1,21 @@
 /* Header Styles */
 .portal-header {
-  background-color: var(--meta-white);
+  /* background-color: var(--meta-white); */
+  background-color: white;
   box-shadow: 0 2px 8px var(--meta-shadow);
   position: sticky;
   top: 0;
+  left: 0;
   z-index: 1000;
+  display: flex;
+  align-items: flex-start;
 }
 
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 16px 0;
-
 }
 
 /* Logo */
@@ -35,12 +38,14 @@
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
+
 
 .main-nav li {
   margin: 0 16px;
 }
+
 
 .main-nav a {
   text-decoration: none;
@@ -107,44 +112,203 @@
   transition: var(--meta-transition);
 }
 
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0%;
+  background-color: #535699;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100vw;
+  background-color: white;
+  padding: 32px 120px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border-radius: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 60px;
+}
+
+.nav-item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.locations-dropdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.students-menu,
+.life-at-pharpadharo-section,
+.about-dropdown,
+.jobs-dropdown {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+
+.dropdown a {
+  position: relative;
+  display: inline-block; 
+  padding: 4px 0;
+  margin: 4px 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dropdown a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #535699;
+  transition: width 0.3s ease;
+}
+
+.dropdown a:hover::after {
+  width: 50%;
+}
+
+
 /* Responsive */
 @media (max-width: 992px) {
+
+  .header-content {
+    justify-content: space-between;
+    padding: 16px 20px;
+    z-index: 9999;
+  }
+
+  @keyframes hamAniFromTop {
+    from {
+      transform: translateY(-100%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
   .main-nav {
     position: fixed;
     top: 70px;
     left: -100%;
     width: 100%;
     height: calc(100vh - 70px);
-    background-color: var(--meta-white);
+    /* background-color: var(--meta-white); */
     transition: var(--meta-transition);
-    z-index: 1000;
-    padding: 24px;
+    z-index: 100;
+    padding: 0px 24px;
     box-shadow: 0 4px 8px var(--meta-shadow);
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 10px;
+
   }
-  
+
   .main-nav.active {
     left: 0;
+    transform: translateY(0);
   }
-  
+
   .main-nav ul {
     flex-direction: column;
+    justify-content: space-between;
+    animation: hamAni 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    will-change: transform;
+    background-color: white;
+    z-index: 10;
   }
-  
+
   .main-nav li {
     margin: 16px 0;
+    animation: hamAni 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    will-change: transform;
   }
-  
+
   .mobile-menu-toggle {
     display: block;
+    /* text-emphasis: none; */
+    color: black;
+    font-size: 20px;
   }
-  
+
   .header-actions .btn {
     display: none;
   }
+
+
+  .dropdown {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 80vw;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    border-radius: 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+    z-index: 9999;
+  }
+
+  .students-menu,
+  .life-at-pharpadharo-section,
+  .about-dropdown,
+  .jobs-dropdown,
+  .locations-dropdown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+
 }
 
+/* 
 @media (max-width: 576px) {
   .logo span {
     display: none;
   }
-}
+} */

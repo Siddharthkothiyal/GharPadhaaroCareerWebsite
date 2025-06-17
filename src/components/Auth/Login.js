@@ -20,37 +20,37 @@ const Login = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    
+
     if (!formData.email) {
       newErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Email is invalid';
     }
-    
+
     if (!formData.password) {
       newErrors.password = 'Password is required';
     } else if (formData.password.length < 6) {
       newErrors.password = 'Password must be at least 6 characters';
     }
-    
+
     return newErrors;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     const formErrors = validateForm();
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
       return;
     }
-    
+
     // Clear errors
     setErrors({});
-    
+
     // Here you would typically handle the login logic
     console.log('Login form submitted:', formData);
-    
+
     // For demo purposes, we'll just reset the form
     setFormData({
       email: '',
@@ -68,7 +68,7 @@ const Login = () => {
             </Link>
           <h2>Log in to GharPadharo Careers</h2>
         </div>
-        
+
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
             <label htmlFor="email">Email</label>
@@ -83,7 +83,7 @@ const Login = () => {
             />
             {errors.email && <span className="error-message">{errors.email}</span>}
           </div>
-          
+
           <div className="form-group">
             <label htmlFor="password">Password</label>
             <input
@@ -97,10 +97,10 @@ const Login = () => {
             />
             {errors.password && <span className="error-message">{errors.password}</span>}
           </div>
-          
+
           <button type="submit" className="auth-button">Log In</button>
         </form>
-        
+
         <div className="auth-footer">
           <a href="#" className="forgot-password">Forgot Password?</a>
           <p className="auth-redirect">
