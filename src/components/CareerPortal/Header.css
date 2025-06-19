@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 16px 0;
+  padding: 10px 0;
 }
 
 /* Logo */
@@ -159,7 +159,8 @@
   gap: 60px;
 }
 
-.nav-item:hover .dropdown {
+.nav-item:hover .dropdown,
+.nav-item.active .dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);

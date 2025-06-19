@@ -71,6 +71,14 @@
   color: #b0b3b8;
 }
 
+.newsletter-form .btn-primary{
+  max-width: 90px;
+  background-color: white;
+  color: black;
+padding-left: 5px;
+}
+
+
 /* Footer Bottom */
 .footer-bottom {
   display: flex;

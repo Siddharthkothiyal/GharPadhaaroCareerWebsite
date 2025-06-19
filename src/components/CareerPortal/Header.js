@@ -1,18 +1,40 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-
+import ResumeUpload from './ResumeUpload';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showResumeUpload, setShowResumeUpload] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleResumeUpload = () => {
+    setShowResumeUpload(true);
+  };
+
+  const handleResumeProcessed = (resumeData) => {
+    // Store the resume data in localStorage or state management solution
+    localStorage.setItem('resumeData', JSON.stringify(resumeData));
+    console.log('Resume data extracted:', resumeData);
+    
+    // You could also dispatch this data to your state management solution
+    // or pass it to a context provider
+  };
+
+  const toggleDropdown = (dropdown) => {
+    if (activeDropdown === dropdown) {
+      setActiveDropdown(null);
+    } else {
+      setActiveDropdown(dropdown);
+    }
+  };
+
   return (
     <header className="portal-header">
-      {/* <div className="container"> */}
       <div className="header-content">
         <div className="logo">
           <Link to="/">
@@ -24,8 +46,8 @@ const Header = () => {
         <nav className={`main-nav ${isMenuOpen ? 'active' : ''} nav-items`}>
           <ul>
             <li className='nav-item'>
-              <span className="nav-link">
-                Jobs <i className="fa-solid fa-angle-down"></i>
+              <span className="nav-link" onClick={() => toggleDropdown('jobs')}>
+                Jobs <i className={`fa-solid ${activeDropdown === 'jobs' ? 'fa-angle-up' : 'fa-angle-down'}`}></i>
               </span>
               <div className="dropdown jobs-dropdown">
                 <Link to="/jobs/engineering">Engineering</Link>
@@ -46,40 +68,21 @@ const Header = () => {
             </li>
 
             <li className='nav-item'>
-              <span className="nav-link">
-                Location <i className="fa-solid fa-angle-down"></i>
+              <span className="nav-link" onClick={() => toggleDropdown('locations')}>
+                Location <i className={`fa-solid ${activeDropdown === 'locations' ? 'fa-angle-up' : 'fa-angle-down'}`}></i>
               </span>
               <div className="dropdown locations-dropdown">
-                <Link to="/locations/mumbai">Mumbai</Link>
-                <Link to="/locations/delhi">Delhi</Link>
-                <Link to="/locations/bangalore">Bangalore</Link>
-                <Link to="/locations/hyderabad">Hyderabad</Link>
-                <Link to="/locations/chennai">Chennai</Link>
-                <Link to="/locations/kolkata">Kolkata</Link>
-                <Link to="/locations/pune">Pune</Link>
-                <Link to="/locations/ahmedabad">Ahmedabad</Link>
-                <Link to="/locations/jaipur">Jaipur</Link>
-                <Link to="/locations/lucknow">Lucknow</Link>
-                <Link to="/locations/chandigarh">Chandigarh</Link>
-                <Link to="/locations/bhopal">Bhopal</Link>
-                <Link to="/locations/indore">Indore</Link>
-                <Link to="/locations/nagpur">Nagpur</Link>
-                <Link to="/locations/kochi">Kochi</Link>
-                <Link to="/locations/thiruvananthapuram">Thiruvananthapuram</Link>
-                <Link to="/locations/guwahati">Guwahati</Link>
-                <Link to="/locations/visakhapatnam">Visakhapatnam</Link>
-                <Link to="/locations/surat">Surat</Link>
-                <Link to="/locations/patna">Patna</Link>
-                <Link to="/locations/ranchi">Ranchi</Link>
-                <Link to="/locations/bhubaneswar">Bhubaneswar</Link>
-                <Link to="/locations/meerut">Meerut</Link>
-                <Link to="/locations/dehradun">Dehradun</Link>
+                <Link to="/locations/mumbai">Dehradun</Link>
+                <Link to="/locations/delhi">Haridwar</Link>
+                <Link to="/locations/bangalore">Nainital</Link>
+                <Link to="/locations/hyderabad">Mussorie</Link>
+                <Link to="/locations/chennai">Roorkee</Link>
               </div>
             </li>
 
             <li className='nav-item'>
-              <span className="nav-link">
-                Students <i className="fa-solid fa-angle-down"></i>
+              <span className="nav-link" onClick={() => toggleDropdown('students')}>
+                Students <i className={`fa-solid ${activeDropdown === 'students' ? 'fa-angle-up' : 'fa-angle-down'}`}></i>
               </span>
               <div className="dropdown students-menu">
                 <Link to="/students/internships">Internship Opportunities</Link>
@@ -90,14 +93,13 @@ const Header = () => {
                 <Link to="/students/scholarships">Scholarships</Link>
                 <Link to="/students/mentorship">Mentorship Programs</Link>
                 <Link to="/students/resources">Learning Resources</Link>
-                <Link to="/students/campus-recruitment">Campus Recruitment</Link>
                 <Link to="/students/faqs">FAQs for Students</Link>
               </div>
             </li>
 
             <li className='nav-item'>
-              <span className="nav-link">
-                Life at GharPadhaaro <i className="fa-solid fa-angle-down"></i>
+              <span className="nav-link" onClick={() => toggleDropdown('life')}>
+                Life at GharPadhaaro <i className={`fa-solid ${activeDropdown === 'life' ? 'fa-angle-up' : 'fa-angle-down'}`}></i>
               </span>
               <div className="dropdown life-at-pharpadharo-section">
                 <Link to="/life-at-gharpadhaaro/our-culture">Our Culture</Link>
@@ -114,8 +116,8 @@ const Header = () => {
             </li>
 
             <li className='nav-item'>
-              <span className="nav-link">
-                About <i className="fa-solid fa-angle-down"></i>
+              <span className="nav-link" onClick={() => toggleDropdown('about')}>
+                About <i className={`fa-solid ${activeDropdown === 'about' ? 'fa-angle-up' : 'fa-angle-down'}`}></i>
               </span>
               <div className="dropdown about-dropdown">
                 <Link to="/about/our-story">Our Story</Link>
@@ -133,17 +135,18 @@ const Header = () => {
 
         <div className="header-actions">
           <Link to="/login" className="btn btn-secondary">Sign In</Link>
-          <Link to="" className="btn btn-primary">Upload Resume</Link>
+          <button onClick={handleResumeUpload} className="btn btn-primary">Upload Resume</button>
 
-          {/* <button className="mobile-menu-toggle" onClick={toggleMenu}>
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
-            </button> */}
           <i className="fa-solid fa-bars mobile-menu-toggle" onClick={toggleMenu}></i>
         </div>
       </div>
-      {/* </div> */}
+
+      {showResumeUpload && (
+        <ResumeUpload 
+          onClose={() => setShowResumeUpload(false)} 
+          onResumeProcessed={handleResumeProcessed}
+        />
+      )}
     </header>
   );
 };
