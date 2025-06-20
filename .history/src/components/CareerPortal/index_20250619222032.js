@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './CareerPortal.css';
 import Header from './Header';
-import JobSearch from './JobListing/JobSearch';
-import JobFilters from './JobListing/JobFilters';
-import JobListings from './JobListing/JobListings';
+import JobSearch from './JobSearch';
+import JobFilters from './JobFilters';
+import JobListings from './JobListings';
 import FeaturedTeams from './FeaturedTeams';
 import Footer from './Footer';
 

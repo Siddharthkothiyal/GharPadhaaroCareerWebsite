@@ -7,7 +7,6 @@ import Signup from './components/Auth/Signup';
 import LandingPage from './components/LandingPage/LandingPage';
 
 import JobCategory from './components/CareerPortal/JobListing/JobCategory';
-import JobLocation from './components/CareerPortal/JobListing/JobLocation';
 
 
 
@@ -24,7 +23,6 @@ function App() {
           <Route path="/signup" element={<Signup />} />
 
           <Route path="/jobs/:category" element={<JobCategory />} />
-          <Route path="/jobs/location/:location" element={<JobLocation />} />
 
 
           
