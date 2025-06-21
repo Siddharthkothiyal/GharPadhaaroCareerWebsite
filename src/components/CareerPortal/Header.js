@@ -47,7 +47,7 @@ const Header = () => {
           <ul>
             <li className='nav-item'>
               <span className="nav-link" onClick={() => toggleDropdown('jobs')}>
-                Jobs <i className={`fa-solid ${activeDropdown === 'jobs' ? 'fa-angle-up' : 'fa-angle-down'}`}></i>
+                Jobs
               </span>
               <div className="dropdown jobs-dropdown">
                 <Link to="/jobs/engineering">Engineering</Link>

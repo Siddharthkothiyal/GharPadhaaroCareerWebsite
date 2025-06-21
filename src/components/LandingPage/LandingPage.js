@@ -257,17 +257,6 @@ const LandingPage = () => {
                 <Link to="/careers" className="btn btn-outline">Browse Jobs</Link>
               </div>
             </div>
-            <div className="hero-image">
-              <div className="image-placeholder">
-                <svg width="300" height="250" viewBox="0 0 300 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="300" height="250" rx="8" fill="#E4E6EB" />
-                  <path d="M150 125C167.673 125 182 110.673 182 93C182 75.3269 167.673 61 150 61C132.327 61 118 75.3269 118 93C118 110.673 132.327 125 150 125Z" fill="#1877F2" />
-                  <rect x="85" y="140" width="130" height="65" rx="8" fill="#1877F2" opacity="0.7" />
-                  <path d="M150 170C150 170 120 170 120 140" stroke="white" strokeWidth="4" strokeLinecap="round" />
-                  <path d="M150 170C150 170 180 170 180 140" stroke="white" strokeWidth="4" strokeLinecap="round" />
-                </svg>
-              </div>
-            </div>
           </div>
         </section>
 

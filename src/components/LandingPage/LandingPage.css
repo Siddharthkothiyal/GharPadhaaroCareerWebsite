@@ -126,7 +126,8 @@ p {
   font-size: 1.25rem;
   color: 535699;
   margin-bottom: 30px;
-  max-width: 600px;
+  max-width: 900px;
+  margin-left: 8.5px;
 }
 
 .hero-buttons {
