@@ -47,7 +47,7 @@ const Header = () => {
           <ul>
             <li className='nav-item'>
               <span className="nav-link" onClick={() => toggleDropdown('jobs')}>
-                Jobs <i className={`fa-solid ${activeDropdown === 'jobs' ? 'fa-angle-up' : 'fa-angle-down'}`}></i>
+                Jobs
               </span>
               <div className="dropdown jobs-dropdown">
                 <Link to="/jobs/engineering">Engineering</Link>
@@ -69,8 +69,7 @@ const Header = () => {
 
             <li className='nav-item'>
               <span className="nav-link" onClick={() => toggleDropdown('locations')}>
-                Location <i className={`fa-solid ${activeDropdown === 'locations' ? 'fa-angle-up' : 'fa-angle-down'}`}></i>
-              </span>
+                Location  </span>
               <div className="dropdown locations-dropdown">
                 <Link to="/locations/mumbai">Dehradun</Link>
                 <Link to="/locations/delhi">Haridwar</Link>
@@ -82,8 +81,7 @@ const Header = () => {
 
             <li className='nav-item'>
               <span className="nav-link" onClick={() => toggleDropdown('students')}>
-                Students <i className={`fa-solid ${activeDropdown === 'students' ? 'fa-angle-up' : 'fa-angle-down'}`}></i>
-              </span>
+                Students   </span>
               <div className="dropdown students-menu">
                 <Link to="/students/internships">Internship Opportunities</Link>
                 <Link to="/students/fresher-jobs">Fresher Job Roles</Link>
@@ -99,8 +97,7 @@ const Header = () => {
 
             <li className='nav-item'>
               <span className="nav-link" onClick={() => toggleDropdown('life')}>
-                Life at GharPadhaaro <i className={`fa-solid ${activeDropdown === 'life' ? 'fa-angle-up' : 'fa-angle-down'}`}></i>
-              </span>
+                Life at GharPadhaaro  </span>
               <div className="dropdown life-at-pharpadharo-section">
                 <Link to="/life-at-gharpadhaaro/our-culture">Our Culture</Link>
                 <Link to="/life-at-gharpadhaaro/workplace-vibes">Workplace Vibes</Link>
@@ -117,8 +114,7 @@ const Header = () => {
 
             <li className='nav-item'>
               <span className="nav-link" onClick={() => toggleDropdown('about')}>
-                About <i className={`fa-solid ${activeDropdown === 'about' ? 'fa-angle-up' : 'fa-angle-down'}`}></i>
-              </span>
+                About   </span>
               <div className="dropdown about-dropdown">
                 <Link to="/about/our-story">Our Story</Link>
                 <Link to="/about/core-values">Core Values</Link>
