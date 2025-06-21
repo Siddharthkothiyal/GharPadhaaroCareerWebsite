@@ -49,22 +49,6 @@ const Header = () => {
               <span className="nav-link" onClick={() => toggleDropdown('jobs')}>
                 Jobs
               </span>
-              <div className="dropdown jobs-dropdown">
-                <Link to="/jobs/engineering">Engineering</Link>
-                <Link to="/jobs/design">Design</Link>
-                <Link to="/jobs/product">Product</Link>
-                <Link to="/jobs/marketing">Marketing</Link>
-                <Link to="/jobs/sales">Sales</Link>
-                <Link to="/jobs/hr">Human Resources (HR)</Link>
-                <Link to="/jobs/operations">Operations</Link>
-                <Link to="/jobs/customer-support">Customer Support</Link>
-                <Link to="/jobs/business-analyst">Business Analyst</Link>
-                <Link to="/jobs/content-writing">Content Writing</Link>
-                <Link to="/jobs/finance">Finance & Accounts</Link>
-                <Link to="/jobs/internships">Internships</Link>
-                <Link to="/jobs/fresher-jobs">Fresher Jobs</Link>
-                <Link to="/jobs/remote-jobs">Remote Jobs</Link>
-              </div>
             </li>
 
             <li className='nav-item'>
