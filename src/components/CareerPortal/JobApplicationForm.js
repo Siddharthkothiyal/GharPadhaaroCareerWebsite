@@ -100,6 +100,7 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
+                placeholder='first name'
               />
             </div>
             
@@ -112,6 +113,8 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
+                placeholder='last name'
+
               />
             </div>
           </div>
@@ -126,6 +129,8 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                placeholder='email'
+
               />
             </div>
             
@@ -138,16 +143,17 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
                 value={formData.phone}
                 onChange={handleChange}
                 required
+                placeholder='phone number'
               />
             </div>
           </div>
         </div>
         
-        <div className="form-section">
+        <div className="form-section ">
           <h3>Resume & Cover Letter</h3>
           
-          <div className="form-group">
-            <label htmlFor="resume">Resume * (PDF or DOCX)</label>
+          <div className="">
+            <label htmlFor="resume" className='file-upload-btn'>Resume * (PDF or DOCX)</label>
             <input
               type="file"
               id="resume"
@@ -164,7 +170,7 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
             )}
           </div>
           
-          <div className="form-group">
+          <div className="form-group coverletter-section">
             <label htmlFor="coverLetter">Cover Letter (Optional)</label>
             <textarea
               id="coverLetter"
@@ -245,8 +251,8 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
         </div>
         
         <div className="form-actions">
-          <button type="button" className="btn btn-secondary">Cancel</button>
-          <button type="submit" className="btn btn-primary">Submit Application</button>
+          <button type="button" className="btn btn-secondary cancel-btn ">Cancel</button>
+          <button type="submit" className="btn btn-primary submit-application-btn">Submit Application</button>
         </div>
       </form>
     </div>
