@@ -50,10 +50,7 @@ const Header = () => {
             </li>
 
             <li className="nav-item">
-              <span
-                className="nav-link"
-                onClick={() => toggleDropdown("locations")}
-              >
+              <span className="nav-link" onClick={() => toggleDropdown("locations")}>
                 Location
               </span>
               <div className="dropdown locations-dropdown">
@@ -66,41 +63,19 @@ const Header = () => {
             </li>
 
             <li className="nav-item">
-              <span
-                className="nav-link"
-                onClick={() => toggleDropdown("students")}
-              >
+              <span className="nav-link" onClick={() => toggleDropdown("students")}>
                 Students
               </span>
               <div className="dropdown students-menu">
-                <HashLink smooth to="/students#internships">
-                  Internship Opportunities
-                </HashLink>
-
-                <HashLink smooth to="/students#FreshersJob">
-                  Fresher Job Roles
-                </HashLink>
-                <HashLink smooth to="/students#EarlyCareers">
-                  Early Career Programs
-                </HashLink>
-                <HashLink smooth to="/students#Hackathons">
-                  Hackathons & Challenges
-                </HashLink>
-                <HashLink smooth to="/students#Webinars">
-                  Career Webinars
-                </HashLink>
-                <HashLink smooth to="/students#Scholarships">
-                  Scholarships
-                </HashLink>
-                <HashLink smooth to="/students#Mentorship">
-                  Mentorship Programs
-                </HashLink>
-                <HashLink smooth to="/students#Resources">
-                  Learning Resources
-                </HashLink>
-                <HashLink smooth to="/students#faqs">
-                  FAQs for Students
-                </HashLink>
+                <HashLink smooth to="/students#internships">Internship Opportunities</HashLink>
+                <HashLink smooth to="/students#FreshersJob">Fresher Job Roles</HashLink>
+                <HashLink smooth to="/students#EarlyCareers">Early Career Programs</HashLink>
+                <HashLink smooth to="/students#Hackathons">Hackathons & Challenges</HashLink>
+                <HashLink smooth to="/students#Webinars">Career Webinars</HashLink>
+                <HashLink smooth to="/students#Scholarships">Scholarships</HashLink>
+                <HashLink smooth to="/students#Mentorship">Mentorship Programs</HashLink>
+                <HashLink smooth to="/students#Resources">Learning Resources</HashLink>
+                <HashLink smooth to="/students#faqs">FAQs for Students</HashLink>
               </div>
             </li>
 
@@ -110,37 +85,20 @@ const Header = () => {
               </span>
               <div className="dropdown life-at-pharpadharo-section">
                 <Link to="/life-at-gharpadhaaro/our-culture">Our Culture</Link>
-                <Link to="/life-at-gharpadhaaro/workplace-vibes">
-                  Workplace Vibes
-                </Link>
-                <Link to="/life-at-gharpadhaaro/employee-stories">
-                  Employee Stories
-                </Link>
-                <Link to="/life-at-gharpadhaaro/events-and-celebrations">
-                  Events & Celebrations
-                </Link>
-                <Link to="/life-at-gharpadhaaro/diversity-inclusion">
-                  Diversity & Inclusion
-                </Link>
-                <Link to="/life-at-gharpadhaaro/learning-growth">
-                  Learning & Growth
-                </Link>
-                <Link to="/life-at-gharpadhaaro/perks-benefits">
-                  Perks & Benefits
-                </Link>
-                <Link to="/life-at-gharpadhaaro/work-life-balance">
-                  Work-Life Balance
-                </Link>
+                <Link to="/life-at-gharpadhaaro/workplace-vibes">Workplace Vibes</Link>
+                <Link to="/life-at-gharpadhaaro/employee-stories">Employee Stories</Link>
+                <Link to="/life-at-gharpadhaaro/events-and-celebrations">Events & Celebrations</Link>
+                <Link to="/life-at-gharpadhaaro/diversity-inclusion">Diversity & Inclusion</Link>
+                <Link to="/life-at-gharpadhaaro/learning-growth">Learning & Growth</Link>
+                <Link to="/life-at-gharpadhaaro/perks-benefits">Perks & Benefits</Link>
+                <Link to="/life-at-gharpadhaaro/work-life-balance">Work-Life Balance</Link>
                 <Link to="/life-at-gharpadhaaro/gallery">Gallery</Link>
                 <Link to="/life-at-gharpadhaaro/blogs">Team Blogs</Link>
               </div>
             </li>
 
             <li className="nav-item">
-              <span
-                className="nav-link"
-                onClick={() => toggleDropdown("about")}
-              >
+              <span className="nav-link" onClick={() => toggleDropdown("about")}>
                 About
               </span>
               <div className="dropdown about-dropdown">
@@ -157,17 +115,11 @@ const Header = () => {
         </nav>
 
         <div className="header-actions">
-          <Link to="/login" className="btn btn-secondary">
-            Sign In
-          </Link>
+          <Link to="/login" className="btn btn-secondary">Sign In</Link>
           <button onClick={handleResumeUpload} className="btn btn-primary">
             Upload Resume
           </button>
-
-          <i
-            className="fa-solid fa-bars mobile-menu-toggle"
-            onClick={toggleMenu}
-          ></i>
+          <i className="fa-solid fa-bars mobile-menu-toggle" onClick={toggleMenu}></i>
         </div>
       </div>
 
