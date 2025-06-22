@@ -191,7 +191,6 @@ const JobListings = ({ searchQuery, filters }) => {
                 <p className="job-description">{job.description}</p>
                 <div className="job-card-footer">
                   <button className="btn btn-primary">Apply Now</button>
-                  <button className="btn btn-secondary">Save Job</button>
                 </div>
               </div>
             ))}

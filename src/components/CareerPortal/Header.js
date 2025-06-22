@@ -50,7 +50,6 @@ const Header = () => {
                 Jobs
               </span>
             </li>
-
             <li className='nav-item'>
               <span className="nav-link" onClick={() => toggleDropdown('locations')}>
                 Location  </span>
