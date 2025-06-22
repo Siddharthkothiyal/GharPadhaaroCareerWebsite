@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Header.css';
-import ResumeUpload from './ResumeUpload';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link"; // ✅ renamed to avoid conflict
+import "./Header.css";
+import ResumeUpload from "./ResumeUpload";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,20 +18,12 @@ const Header = () => {
   };
 
   const handleResumeProcessed = (resumeData) => {
-    // Store the resume data in localStorage or state management solution
-    localStorage.setItem('resumeData', JSON.stringify(resumeData));
-    console.log('Resume data extracted:', resumeData);
-    
-    // You could also dispatch this data to your state management solution
-    // or pass it to a context provider
+    localStorage.setItem("resumeData", JSON.stringify(resumeData));
+    console.log("Resume data extracted:", resumeData);
   };
 
   const toggleDropdown = (dropdown) => {
-    if (activeDropdown === dropdown) {
-      setActiveDropdown(null);
-    } else {
-      setActiveDropdown(dropdown);
-    }
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
   return (
@@ -38,21 +31,28 @@ const Header = () => {
       <div className="header-content">
         <div className="logo">
           <Link to="/">
-            <img src="/Logo.ghar.jpg" alt="GharPadharo Logo" width="40" height="40" />
+            <img
+              src="/Logo.ghar.jpg"
+              alt="GharPadharo Logo"
+              width="40"
+              height="40"
+            />
             <span>GharPadharo</span>
           </Link>
         </div>
 
-        <nav className={`main-nav ${isMenuOpen ? 'active' : ''} nav-items`}>
+        <nav className={`main-nav ${isMenuOpen ? "active" : ""} nav-items`}>
           <ul>
-            <li className='nav-item'>
-              <span className="nav-link" onClick={() => toggleDropdown('jobs')}>
+            <li className="nav-item">
+              <span className="nav-link" onClick={() => toggleDropdown("jobs")}>
                 Jobs
               </span>
             </li>
-            <li className='nav-item'>
-              <span className="nav-link" onClick={() => toggleDropdown('locations')}>
-                Location  </span>
+
+            <li className="nav-item">
+              <span className="nav-link" onClick={() => toggleDropdown("locations")}>
+                Location
+              </span>
               <div className="dropdown locations-dropdown">
                 <Link to="/locations/mumbai">Dehradun</Link>
                 <Link to="/locations/delhi">Haridwar</Link>
@@ -62,25 +62,27 @@ const Header = () => {
               </div>
             </li>
 
-            <li className='nav-item'>
-              <span className="nav-link" onClick={() => toggleDropdown('students')}>
-                Students   </span>
+            <li className="nav-item">
+              <span className="nav-link" onClick={() => toggleDropdown("students")}>
+                Students
+              </span>
               <div className="dropdown students-menu">
-                <Link to="/students/internships">Internship Opportunities</Link>
-                <Link to="/students/fresher-jobs">Fresher Job Roles</Link>
-                <Link to="/students/early-careers">Early Career Programs</Link>
-                <Link to="/students/hackathons">Hackathons & Challenges</Link>
-                <Link to="/students/webinars">Career Webinars</Link>
-                <Link to="/students/scholarships">Scholarships</Link>
-                <Link to="/students/mentorship">Mentorship Programs</Link>
-                <Link to="/students/resources">Learning Resources</Link>
-                <Link to="/students/faqs">FAQs for Students</Link>
+                <HashLink smooth to="/students#internships">Internship Opportunities</HashLink>
+                <HashLink smooth to="/students#FreshersJob">Fresher Job Roles</HashLink>
+                <HashLink smooth to="/students#EarlyCareers">Early Career Programs</HashLink>
+                <HashLink smooth to="/students#Hackathons">Hackathons & Challenges</HashLink>
+                <HashLink smooth to="/students#Webinars">Career Webinars</HashLink>
+                <HashLink smooth to="/students#Scholarships">Scholarships</HashLink>
+                <HashLink smooth to="/students#Mentorship">Mentorship Programs</HashLink>
+                <HashLink smooth to="/students#Resources">Learning Resources</HashLink>
+                <HashLink smooth to="/students#faqs">FAQs for Students</HashLink>
               </div>
             </li>
 
-            <li className='nav-item'>
-              <span className="nav-link" onClick={() => toggleDropdown('life')}>
-                Life at GharPadhaaro  </span>
+            <li className="nav-item">
+              <span className="nav-link" onClick={() => toggleDropdown("life")}>
+                Life at GharPadhaaro
+              </span>
               <div className="dropdown life-at-pharpadharo-section">
                 <Link to="/life-at-gharpadhaaro/our-culture">Our Culture</Link>
                 <Link to="/life-at-gharpadhaaro/workplace-vibes">Workplace Vibes</Link>
@@ -95,9 +97,10 @@ const Header = () => {
               </div>
             </li>
 
-            <li className='nav-item'>
-              <span className="nav-link" onClick={() => toggleDropdown('about')}>
-                About   </span>
+            <li className="nav-item">
+              <span className="nav-link" onClick={() => toggleDropdown("about")}>
+                About
+              </span>
               <div className="dropdown about-dropdown">
                 <Link to="/about/our-story">Our Story</Link>
                 <Link to="/about/core-values">Core Values</Link>
@@ -108,21 +111,21 @@ const Header = () => {
                 <Link to="/about/faqs">FAQs</Link>
               </div>
             </li>
-
           </ul>
         </nav>
 
         <div className="header-actions">
           <Link to="/login" className="btn btn-secondary">Sign In</Link>
-          <button onClick={handleResumeUpload} className="btn btn-primary">Upload Resume</button>
-
+          <button onClick={handleResumeUpload} className="btn btn-primary">
+            Upload Resume
+          </button>
           <i className="fa-solid fa-bars mobile-menu-toggle" onClick={toggleMenu}></i>
         </div>
       </div>
 
       {showResumeUpload && (
-        <ResumeUpload 
-          onClose={() => setShowResumeUpload(false)} 
+        <ResumeUpload
+          onClose={() => setShowResumeUpload(false)}
           onResumeProcessed={handleResumeProcessed}
         />
       )}
