@@ -70,36 +70,90 @@ export const mockJobs = [
   },
 ];
 
-const JobListings = () => {
+const JobListings = ({ searchQuery, filters, onApplyNow }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const jobsPerPage = 5;
 
+  const [filteredJobs, setFilteredJobs] = useState(mockJobs);
+
+  useEffect(() => {
+    // Filter jobs based on search query and filters
+    let results = mockJobs;
+    
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      results = results.filter(job => 
+        job.title.toLowerCase().includes(query) ||
+        job.description.toLowerCase().includes(query)
+      );
+    }
+    
+    if (filters) {
+      if (filters.location) {
+        results = results.filter(job => 
+          job.location.toLowerCase().includes(filters.location.toLowerCase())
+        );
+      }
+      if (filters.team) {
+        results = results.filter(job => 
+          job.team.toLowerCase().includes(filters.team.toLowerCase())
+        );
+      }
+      if (filters.jobType) {
+        results = results.filter(job => 
+          job.jobType.toLowerCase() === filters.jobType.toLowerCase()
+        );
+      }
+      if (filters.experience) {
+        results = results.filter(job => 
+          job.experience.toLowerCase() === filters.experience.toLowerCase()
+        );
+      }
+    }
+    
+    setFilteredJobs(results);
+    setCurrentPage(1); // Reset to first page when filters change
+  }, [searchQuery, filters]);
+
   const indexOfLastJob = currentPage * jobsPerPage;
   const indexOfFirstJob = indexOfLastJob - jobsPerPage;
-  const currentJobs = mockJobs.slice(indexOfFirstJob, indexOfLastJob);
-  const totalPages = Math.ceil(mockJobs.length / jobsPerPage);
+  const currentJobs = filteredJobs.slice(indexOfFirstJob, indexOfLastJob);
+  const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
 
   return (
     <div className="job-listings">
-      <h3>{mockJobs.length} job(s) available</h3>
+      <h3>{filteredJobs.length} job(s) available</h3>
 
-      {currentJobs.map(job => (
-        <div key={job.id} className="job-card">
-          <div className="job-card-header">
-            <h4 className="job-title">{job.title}</h4>
-            <div className="job-type">{job.jobType}</div>
+      {currentJobs.length > 0 ? (
+        currentJobs.map(job => (
+          <div key={job.id} className="job-card">
+            <div className="job-card-header">
+              <h4 className="job-title">{job.title}</h4>
+              <div className="job-type">{job.jobType}</div>
+            </div>
+            <div className="job-details">
+              <div className="job-detail"><strong>Team:</strong> {job.team}</div>
+              <div className="job-detail"><strong>Location:</strong> {job.location}</div>
+              <div className="job-detail"><strong>Experience:</strong> {job.experience}</div>
+            </div>
+            <p className="job-description">{job.description}</p>
+            <div className="job-card-footer">
+              <small>Posted on {formatDate(job.datePosted)}</small>
+              <button 
+                className="btn btn-primary apply-btn" 
+                onClick={() => onApplyNow(job)}
+              >
+                Apply Now
+              </button>
+            </div>
           </div>
-          <div className="job-details">
-            <div className="job-detail"><strong>Team:</strong> {job.team}</div>
-            <div className="job-detail"><strong>Location:</strong> {job.location}</div>
-            <div className="job-detail"><strong>Experience:</strong> {job.experience}</div>
-          </div>
-          <p className="job-description">{job.description}</p>
-          <div className="job-card-footer">
-            <small>Posted on {formatDate(job.datePosted)}</small>
-          </div>
+        ))
+      ) : (
+        <div className="no-jobs-found">
+          <h3>No jobs found</h3>
+          <p>Try adjusting your search or filters</p>
         </div>
-      ))}
+      )}
 
       {totalPages > 1 && (
         <div className="pagination">

@@ -92,7 +92,24 @@
 
 .job-card-footer {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 12px;
+}
+
+.apply-btn {
+  padding: 8px 16px;
+  background-color: var(--gharpadhaaro-blue, #0866ff);
+  color: white;
+  border: none;
+  border-radius: var(--gharpadhaaro-radius, 8px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.apply-btn:hover {
+  background-color: var(--gharpadhaaro-blue-dark, #0756d6);
 }
 
 /* Pagination */
