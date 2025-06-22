@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './JobListings.css';
 
-const JobListings = ({ searchQuery, filters }) => {
+const JobListings = ({ searchQuery, filters, onApplyNow }) => {
   // Mock data for job listings
   const mockJobs = [
     {
@@ -190,7 +190,12 @@ const JobListings = ({ searchQuery, filters }) => {
                 </div>
                 <p className="job-description">{job.description}</p>
                 <div className="job-card-footer">
-                  <button className="btn btn-primary">Apply Now</button>
+                  <button 
+                    className="btn btn-primary"
+                    onClick={() => onApplyNow(job)}
+                  >
+                    Apply Now
+                  </button>
                 </div>
               </div>
             ))}
