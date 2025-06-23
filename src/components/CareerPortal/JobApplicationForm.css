@@ -1,4 +1,4 @@
-.job-application-form {
+/* .job-application-form {
   max-width: 800px;
   margin: 0 auto;
   padding: 30px;
@@ -94,4 +94,172 @@
   .job-application-form {
     padding: 20px;
   }
+} */
+
+.job-application-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
 }
+
+.job-application-form h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #1c1e21;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.form-description {
+  color: #65676b;
+  margin-bottom: 30px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e4e6eb;
+}
+
+.form-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1c1e21;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #1c1e21;
+}
+
+/* === Updated styles for inputs and textareas === */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #1c1e21;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #6b6b6b !important;
+  /* Force black border */
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #fff !important;
+  color: #000;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #535699;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(83, 86, 153, 0.2);
+}
+
+/* File input specific */
+input[type="file"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+.file-selected {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #535699;
+}
+
+/* Buttons */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #535699;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #3d3f7c;
+}
+
+.btn-secondary {
+  background-color: #e4e6eb;
+  color: #1c1e21;
+}
+
+.btn-secondary:hover {
+  background-color: #ccc;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .job-application-form h2 {
+    font-size: 24px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .job-application-form {
+    padding: 20px;
+  }
+}
+
+.file-upload-btn {
+  /* border: 1px solid black; */
+  color: #0097e3;
+  cursor: pointer;
+}
+
+.coverletter-section {
+  margin: 20px 0px 0px 0px;
+}
+

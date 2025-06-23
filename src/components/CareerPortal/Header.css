@@ -16,6 +16,7 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 10px 0;
+  width: 100vw;
 }
 
 /* Logo */
@@ -186,7 +187,7 @@
 
 .dropdown a {
   position: relative;
-  display: inline-block; 
+  display: inline-block;
   padding: 4px 0;
   margin: 4px 0;
   text-decoration: none;
@@ -215,7 +216,8 @@
   .header-content {
     justify-content: space-between;
     padding: 16px 20px;
-    z-index: 9999;
+    z-index: 999;
+    width: 100vw;
   }
 
   @keyframes hamAniFromTop {
