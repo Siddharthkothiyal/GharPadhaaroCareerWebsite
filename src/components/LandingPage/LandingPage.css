@@ -68,9 +68,19 @@ p {
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
-  margin-right: 12px;
-  margin-bottom: 12px;
+  /* margin-right: 12px; */
+  /* margin-bottom: 12px; */
+   margin: 0; 
 }
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px; /* reduced from default or unspecified */
+  margin-top: 10px; /* optional spacing above buttons */
+}
+
+
 
 .btn-primary {
   background-color:  #0CAFFF;
@@ -130,10 +140,10 @@ p {
   margin-left: 8.5px;
 }
 
-.hero-buttons {
+/* .hero-buttons {
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
 .hero-image {
   flex: 1;
