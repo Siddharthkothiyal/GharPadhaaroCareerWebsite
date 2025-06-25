@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <header className="portal-header">
       <div className="header-content">
-        <div className="logo">
+        <div className="logo-div">
           <Link to="/">
             <img
               src="/Logo.ghar.jpg"
