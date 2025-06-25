@@ -79,38 +79,38 @@ const JobListings = ({ searchQuery, filters, onApplyNow }) => {
   useEffect(() => {
     // Filter jobs based on search query and filters
     let results = mockJobs;
-    
+
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
-      results = results.filter(job => 
+      results = results.filter(job =>
         job.title.toLowerCase().includes(query) ||
         job.description.toLowerCase().includes(query)
       );
     }
-    
+
     if (filters) {
       if (filters.location) {
-        results = results.filter(job => 
+        results = results.filter(job =>
           job.location.toLowerCase().includes(filters.location.toLowerCase())
         );
       }
       if (filters.team) {
-        results = results.filter(job => 
+        results = results.filter(job =>
           job.team.toLowerCase().includes(filters.team.toLowerCase())
         );
       }
       if (filters.jobType) {
-        results = results.filter(job => 
+        results = results.filter(job =>
           job.jobType.toLowerCase() === filters.jobType.toLowerCase()
         );
       }
       if (filters.experience) {
-        results = results.filter(job => 
+        results = results.filter(job =>
           job.experience.toLowerCase() === filters.experience.toLowerCase()
         );
       }
     }
-    
+
     setFilteredJobs(results);
     setCurrentPage(1); // Reset to first page when filters change
   }, [searchQuery, filters]);
@@ -138,13 +138,13 @@ const JobListings = ({ searchQuery, filters, onApplyNow }) => {
             </div>
             <p className="job-description">{job.description}</p>
             <div className="job-card-footer">
-              <small>Posted on {formatDate(job.datePosted)}</small>
-              <button 
-                className="btn btn-primary apply-btn" 
+              <button
+                className="btn btn-primary apply-btn"
                 onClick={() => onApplyNow(job)}
               >
                 Apply Now
               </button>
+              <small>Posted on {formatDate(job.datePosted)}</small>
             </div>
           </div>
         ))

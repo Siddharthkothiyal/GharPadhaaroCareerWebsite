@@ -21,27 +21,27 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
     const savedResumeData = localStorage.getItem('resumeData');
     if (savedResumeData) {
       const resumeData = JSON.parse(savedResumeData);
-      
+
       // Parse the name into first and last name
       const nameParts = resumeData.name ? resumeData.name.split(' ') : ['', ''];
       const firstName = nameParts[0] || '';
       const lastName = nameParts.slice(1).join(' ') || '';
-      
+
       // Format experience
-      const experience = resumeData.experience ? 
-        resumeData.experience.map(exp => 
+      const experience = resumeData.experience ?
+        resumeData.experience.map(exp =>
           `${exp.title} at ${exp.company} (${exp.duration})`
         ).join('\n') : '';
-      
+
       // Format education
-      const education = resumeData.education ? 
-        resumeData.education.map(edu => 
+      const education = resumeData.education ?
+        resumeData.education.map(edu =>
           `${edu.degree} from ${edu.institution} (${edu.year})`
         ).join('\n') : '';
-      
+
       // Format skills
       const skills = resumeData.skills ? resumeData.skills.join(', ') : '';
-      
+
       // Update form data with resume information
       setFormData(prev => ({
         ...prev,
@@ -85,11 +85,11 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
     <div className="job-application-form">
       <h2>Apply for {jobTitle}</h2>
       <p className="form-description">Please fill out the form below to apply for this position.</p>
-      
+
       <form onSubmit={handleSubmit}>
         <div className="form-section">
           <h3>Personal Information</h3>
-          
+
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="firstName">First Name *</label>
@@ -100,9 +100,10 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
+                placeholder='first name'
               />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="lastName">Last Name *</label>
               <input
@@ -112,10 +113,12 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
+                placeholder='last name'
+
               />
             </div>
           </div>
-          
+
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="email">Email *</label>
@@ -126,9 +129,11 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                placeholder='email'
+
               />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="phone">Phone Number *</label>
               <input
@@ -138,16 +143,17 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
                 value={formData.phone}
                 onChange={handleChange}
                 required
+                placeholder='phone number'
               />
             </div>
           </div>
         </div>
-        
-        <div className="form-section">
+
+        <div className="form-section ">
           <h3>Resume & Cover Letter</h3>
-          
-          <div className="form-group">
-            <label htmlFor="resume">Resume * (PDF or DOCX)</label>
+
+          <div className="">
+            <label htmlFor="resume" className='file-upload-btn'>Resume * (PDF or DOCX)</label>
             <input
               type="file"
               id="resume"
@@ -163,8 +169,8 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
               </p>
             )}
           </div>
-          
-          <div className="form-group">
+
+          <div className="form-group coverletter-section">
             <label htmlFor="coverLetter">Cover Letter (Optional)</label>
             <textarea
               id="coverLetter"
@@ -176,10 +182,10 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
             ></textarea>
           </div>
         </div>
-        
+
         <div className="form-section">
           <h3>Professional Information</h3>
-          
+
           <div className="form-group">
             <label htmlFor="linkedIn">LinkedIn Profile (Optional)</label>
             <input
@@ -191,7 +197,7 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
               placeholder="https://linkedin.com/in/yourprofile"
             />
           </div>
-          
+
           <div className="form-group">
             <label htmlFor="portfolio">Portfolio/Website (Optional)</label>
             <input
@@ -203,7 +209,7 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
               placeholder="https://yourportfolio.com"
             />
           </div>
-          
+
           <div className="form-group">
             <label htmlFor="experience">Work Experience *</label>
             <textarea
@@ -216,7 +222,7 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
               placeholder="List your relevant work experience"
             ></textarea>
           </div>
-          
+
           <div className="form-group">
             <label htmlFor="education">Education *</label>
             <textarea
@@ -229,7 +235,7 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
               placeholder="List your educational background"
             ></textarea>
           </div>
-          
+
           <div className="form-group">
             <label htmlFor="skills">Skills *</label>
             <textarea
@@ -243,10 +249,10 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
             ></textarea>
           </div>
         </div>
-        
+
         <div className="form-actions">
-          <button type="button" className="btn btn-secondary">Cancel</button>
-          <button type="submit" className="btn btn-primary">Submit Application</button>
+          <button type="button" className="application-form-btn cancel-btn ">Cancel</button>
+          <button type="submit" className="application-form-btn submit-application-btn">Submit Application</button>
         </div>
       </form>
     </div>
