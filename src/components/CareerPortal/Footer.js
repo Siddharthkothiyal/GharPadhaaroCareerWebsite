@@ -37,7 +37,7 @@ const Footer = () => {
               <ul>
                 <li><a href="https://www.instagram.com/ghar_padharo?igsh=cDZleTIwc3hpdXlu" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                 <li><a href="https://www.linkedin.com/in/ghar-padharo-64ba67345" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="https://x.com/gharpadharo" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li><a href="" target="_blank" rel="noopener noreferrer">Twitter</a></li>
                 <li><a href="https://youtube.com/@gharpadharo?feature=shared" target="_blank" rel="noopener noreferrer">YouTube</a></li>
               </ul>
             </div>
