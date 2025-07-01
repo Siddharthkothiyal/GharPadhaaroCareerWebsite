@@ -4,12 +4,11 @@ import './JobFilters.css';
 const JobFilters = ({ onFilterChange, filters }) => {
   const locations = [
     'All Locations',
-    'Menlo Park, CA',
-    'New York, NY',
-    'Seattle, WA',
-    'London, UK',
-    'Dublin, Ireland',
-    'Singapore',
+    'Dehradun,Uttarakhand,India',
+    'Haridwar,Uttarakhand,India',
+    'Nainital, Uttarakhand,India',
+    'Mussorie, Uttarakhand,India',
+    'Roorkee, Uttarakhand,India',
     'Remote'
   ];
 
@@ -32,7 +31,6 @@ const JobFilters = ({ onFilterChange, filters }) => {
     'All Job Types',
     'Full-time',
     'Internship',
-    'Contract',
     'Part-time'
   ];
 

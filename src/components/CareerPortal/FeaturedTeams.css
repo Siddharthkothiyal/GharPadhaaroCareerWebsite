@@ -25,8 +25,8 @@
 }
 
 .team-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px var(--meta-shadow);
+  transform: translateY(4px);
+  box-shadow: 0 4px 16px #535699;
   /* border-color: var(--meta-blue); */
 }
 

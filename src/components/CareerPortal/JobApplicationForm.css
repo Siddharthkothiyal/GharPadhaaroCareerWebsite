@@ -4,14 +4,15 @@
   padding: 30px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .job-application-form h2 {
   margin-top: 0;
   margin-bottom: 10px;
   color: #1c1e21;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 600;
 }
 
@@ -27,7 +28,7 @@
 }
 
 .form-section h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 20px;
   color: #1c1e21;
@@ -51,33 +52,59 @@
   color: #1c1e21;
 }
 
+/* === Updated styles for inputs and textareas === */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #1c1e21;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #dddfe2;
+  padding: 12px 14px;
+  border: 1px solid #6b6b6b !important;
+  /* Force black border */
   border-radius: 6px;
   font-size: 16px;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  background-color: #fff !important;
+  color: #000;
 }
 
+
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
   border-color: #535699;
   outline: none;
   box-shadow: 0 0 0 2px rgba(83, 86, 153, 0.2);
 }
 
-.file-input {
-  padding: 10px 0;
+/* File input specific */
+input[type="file"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
 }
 
 .file-selected {
   margin-top: 8px;
-  font-size: 14px;
+  font-size: 15px;
   color: #535699;
 }
 
+/* Buttons */
 .form-actions {
   display: flex;
   justify-content: flex-end;
@@ -85,13 +112,102 @@
   margin-top: 30px;
 }
 
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #535699;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #3d3f7c;
+}
+
+.btn-secondary {
+  background-color: #e4e6eb;
+  color: #1c1e21;
+}
+
+.btn-secondary:hover {
+  background-color: #ccc;
+}
+
+.submit-application-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  background-color: #42B72A;
+  transition: background-color 0.3s ease;
+  width: 30%;
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  background-color: #0097E3;
+  transition: background-color 0.3s ease;
+  width: 30%;
+}
+
+.application-form-btn{
+  font-weight: 500;
+}
+
+.application-form-btn:hover{
+  background-color: #535699;
+  color : white;
+}
+
+/* Mobile responsiveness */
 @media (max-width: 768px) {
+  .job-application-form h2 {
+    font-size: 24px;
+  }
+
   .form-row {
     flex-direction: column;
     gap: 0;
   }
-  
+
   .job-application-form {
     padding: 20px;
   }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .submit-application-btn {
+    align-self: flex-end;
+    width: auto;
+  }
+
+  .cancel-btn {
+    align-self: flex-end;
+    width: auto;
+    padding: 10px 30px;
+  }
+}
+
+.file-upload-btn {
+  /* border: 1px solid black; */
+  color: #0097e3;
+  cursor: pointer;
+}
+
+.coverletter-section {
+  margin: 20px 0px 0px 0px;
 }
