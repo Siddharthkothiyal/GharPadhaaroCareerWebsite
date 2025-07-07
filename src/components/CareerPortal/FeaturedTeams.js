@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './FeaturedTeams.css';
+import { div } from 'framer-motion/client';
 
 const FeaturedTeams = () => {
   const teams = [
@@ -14,7 +15,8 @@ const FeaturedTeams = () => {
           <circle cx="7.5" cy="14.5" r="1.5"></circle>
           <circle cx="16.5" cy="14.5" r="1.5"></circle>
         </svg>
-      )
+      ),
+      image: "/GharPadharoPictures/ArtificialIntelligence.jpg"
     },
     {
       id: 2,
@@ -33,7 +35,8 @@ const FeaturedTeams = () => {
           <path d="M12 7v5l3 3"></path>
           <circle cx="12" cy="12" r="10"></circle>
         </svg>
-      )
+      ),
+      image: "/GharPadharoPictures/MetaVerse.jpg"
     },
     {
       id: 3,
@@ -46,7 +49,8 @@ const FeaturedTeams = () => {
           <line x1="6" y1="6" x2="6.01" y2="6"></line>
           <line x1="6" y1="18" x2="6.01" y2="18"></line>
         </svg>
-      )
+      ),
+      image: "/GharPadharoPictures/Research.jpg"
     },
     {
       id: 4,
@@ -58,24 +62,59 @@ const FeaturedTeams = () => {
           <polyline points="8 6 2 12 8 18"></polyline>
           <line x1="12" y1="2" x2="12" y2="22"></line>
         </svg>
-      )
+      ),
+      image: "/GharPadharoPictures/Engineering.jpg"
     }
   ];
 
   return (
-    <div className="featured-teams">
-      <div className="teams-grid">
-        {teams.map(team => (
-          <div className="team-card" key={team.id}>
-            <div className="team-icon">{team.icon}</div>
-            <h3 className="team-name">{team.name}</h3>
-            <p className="team-description">{team.description}</p>
-            <Link to="/careers" className="team-link">View Jobs <span>→</span></Link>
+
+    <>
+      {/* previos code */}
+      {/* <div className="featured-teams">
+        <div className="teams-grid">
+          {teams.map(team => (
+            <div className="team-card" key={team.id}>
+              <div className="team-icon">{team.icon}</div>
+              <h3 className="team-name">{team.name}</h3>
+              <p className="team-description">{team.description}</p>
+              <Link to="/careers" className="team-link">View Jobs <span>→</span></Link>
+            </div>
+          ))}
+        </div>
+      </div> */}
+
+      <div className="space-y-20">
+        {teams.map((item, index) => (
+          <div
+            key={index}
+            className={`flex flex-col md:h-[300px] w-[80vw] justify-between items-center md:items-start ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'
+              }`}
+          >
+            <div className="h-[200px] md:h-[300px] w-full md:w-[45%] flex justify-center">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="h-full w-[90%] rounded-2xl object-cover"
+              />
+            </div>
+
+            <div className="w-full md:w-[50%] bg-white rounded-3xl p-5 flex flex-col items-center justify-evenly boxShadow mt-5 md:mt-0">
+              <div className="flex flex-row items-center justify-center gap-3 h-15">
+                <p className="team-icon relative top-3">{item.icon}</p>
+                <h2 className="text-2xl">{item.name}</h2>
+              </div>
+              <p className="text-gray-700 text-center md:text-left">{item.description}</p>
+              <Link to="/careers" className="team-link">
+                View Jobs <span>→</span>
+              </Link>
+            </div>
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
 export default FeaturedTeams;
+

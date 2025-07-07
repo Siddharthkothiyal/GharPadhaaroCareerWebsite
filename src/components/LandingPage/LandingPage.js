@@ -244,8 +244,14 @@ const LandingPage = () => {
     <>
       <div className="landing-page">
         {/* Hero Section */}
-        <section className="hero">
-          <div className="container">
+        <section className="hero flex flex-col items-center lg:flex-row lg:px-10"
+          style={{
+            backgroundImage: 'url("/GharPadharoPictures/landingPageImage.jpg")',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+          }}>
+          <div className="container w-[100vw] lg:w-[50vw] ">
             <div className="hero-content">
               <h1>Your career is your canvas paint boldly.</h1>
               <p>
@@ -257,6 +263,9 @@ const LandingPage = () => {
                 <Link to="/careers" className="btn btn-outline">Browse Jobs</Link>
               </div>
             </div>
+          </div>
+          <div className='w-[90vw] lg:w-[40vw] mr-0 lg:mr-10 p-5 lg:p-10'>
+            <img src="/GharPadharoPictures/landingPageMain.jpg" alt="Logo" className='rounded-2xl w-[80vw] lg:w-[100%]' />
           </div>
         </section>
 

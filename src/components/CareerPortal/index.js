@@ -81,7 +81,7 @@ const CareerPortal = () => {
               </div>
             </section>
             
-            <section className="featured-teams-section">
+            <section className="featured-teams-section h-auto">
               <div className="container">
                 <h2>Featured Teams</h2>
                 <p>Our best ideas happen together. Teamwork drives innovation, cultivates human connection and supports constant learning.</p>

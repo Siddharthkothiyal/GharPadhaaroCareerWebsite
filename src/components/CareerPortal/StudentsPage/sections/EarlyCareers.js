@@ -47,35 +47,41 @@ const EarlyCareers = () => {
       <div className="absolute -top-20 -left-32 w-80 h-80 bg-indigo-200 opacity-20 rounded-full blur-3xl -z-10 animate-pulse" />
       <div className="absolute -bottom-20 -right-32 w-80 h-80 bg-purple-200 opacity-20 rounded-full blur-3xl -z-10 animate-pulse" />
 
-      <div className="max-w-5xl mx-auto">
+      <div className="flex flex-col items-center justify-center">
         <h2 className="text-4xl font-bold text-center text-[#525599] mb-16 animate-fade-in-down">
-           Early Career Programs
+          Early Career Programs
         </h2>
 
-        <div className="space-y-10">
-          {programs.map((program, index) => (
-            <div
-              key={index}
-              className="group flex items-start gap-6 bg-white rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 px-6 py-5 border border-gray-200 animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "both" }}
-            >
-              <div className="min-w-[50px]">{program.icon}</div>
-              <div>
-                <h3 className="text-2xl font-semibold text-[#525599] mb-2">
-                  {program.title}
-                </h3>
-                <p className="text-gray-700 mb-4 text-sm leading-relaxed">
-                  {program.description}
-                </p>
-                <ul className="list-disc pl-5 text-gray-600 text-sm space-y-1">
-                  {program.points.map((point, idx) => (
-                    <li key={idx}>{point}</li>
-                  ))}
-                </ul>
+        <div className="w-[100vw] flex flex-col-reverse gap-5 lg:flex-row items-center justify-center">
+          <div className="space-y-5 w-[100vw] lg:w-[50vw] flex flex-col items-center">
+            {programs.map((program, index) => (
+              <div
+                key={index}
+                className="w-[95%] group flex items-center justify-center gap-6 bg-white rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 px-6 py-5 border border-gray-200 animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "both" }}
+              >
+                <div className="min-w-[50px]">{program.icon}</div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-[#525599] mb-2">
+                    {program.title}
+                  </h3>
+                  <p className="text-gray-700 mb-4 text-sm leading-relaxed">
+                    {program.description}
+                  </p>
+                  <ul className="list-disc pl-5 text-gray-600 text-sm space-y-1">
+                    {program.points.map((point, idx) => (
+                      <li key={idx}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="w-[100vw] lg:w-[40vw] flex items-center justify-center ">
+            <img src="/GharPadharoPictures/EarlyCareerPrograms.jpg" alt="careers" className="w-[90%] rounded-3xl"/>
+          </div>
         </div>
+
       </div>
     </section>
   );

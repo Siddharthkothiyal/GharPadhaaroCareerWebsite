@@ -61,7 +61,7 @@ const Internships = () => {
 
           <div className="lg:w-1/2">
             <img
-              src="/career_path2.png"
+              src="/GharPadharoPictures/Internship.jpg"
               alt="Internship Path"
               className="rounded-2xl shadow-xl w-full max-w-lg mx-auto transition-transform duration-500 hover:scale-[1.05]"
             />
@@ -91,11 +91,11 @@ const Internships = () => {
             </ul>
           </div>
 
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 ">
             <img
-              src="/career_path1.jpg"
-              alt="Career Growth"
-              className="rounded-2xl shadow-xl w-full max-w-lg mx-auto transition-transform duration-500 hover:scale-[1.05]"
+              src="/GharPadharoPictures/TheCareerProgression.jpg"
+              alt="Internships"
+              className="rounded-2xl shadow-xl w-full h-[300px] lg:h-[400px]  max-w-lg mx-auto transition-transform duration-500 hover:scale-[1.05]"
             />
           </div>
         </div>
