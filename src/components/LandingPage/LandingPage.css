@@ -1,8 +1,10 @@
 /* LandingPage.css - Styles for the landing page */
 
 :root {
-  --primary-color: #535699; /* GharPadharo blue */
-  --secondary-color: #42B72A; /* GharPadharo green */
+  --primary-color: #535699;
+  /* GharPadharo blue */
+  --secondary-color: #42B72A;
+  /* GharPadharo green */
   --text-color: #1C1E21;
   --light-text: #606770;
   --border-color: #DADDE1;
@@ -16,6 +18,7 @@
   --hover-color: #E7F3FF;
   --focus-shadow: 0 0 0 2px rgba(83, 86, 153, 0.2);
 }
+
 /* General Styles */
 .landing-page {
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
@@ -33,7 +36,10 @@ section {
   padding: 60px 0;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin-top: 0;
   font-weight: 600;
 }
@@ -70,20 +76,22 @@ p {
   transition: all 0.2s ease;
   /* margin-right: 12px; */
   /* margin-bottom: 12px; */
-   margin: 0; 
+  margin: 0;
 }
 
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px; /* reduced from default or unspecified */
-  margin-top: 10px; /* optional spacing above buttons */
+  gap: 6px;
+  /* reduced from default or unspecified */
+  margin-top: 10px;
+  /* optional spacing above buttons */
 }
 
 
 
 .btn-primary {
-  background-color:  #0CAFFF;
+  background-color: #0CAFFF;
   color: white;
   border: none;
 }
@@ -117,8 +125,7 @@ p {
 
 /* Hero Section */
 .hero {
-  background-color: var(--background-color);
-  padding: 80px 0;
+  padding: 80px 0px;
 }
 
 .hero .container {
@@ -130,6 +137,7 @@ p {
 
 .hero-content {
   flex: 1;
+  width: 100%;
 }
 
 .hero-content p {
@@ -168,6 +176,7 @@ p {
 }
 
 .features-grid {
+  width: 90vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
@@ -209,11 +218,12 @@ p {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 40px;
-  color:white;
+  color: white;
   font-size: 1.1rem;
 }
 
 .teams-carousel {
+  width: 90vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -347,7 +357,7 @@ p {
 
 .cta-section .btn-primary {
   background-color: #42B72A;
-  color:black;
+  color: black;
 }
 
 .cta-section .btn-primary:hover {
@@ -369,26 +379,32 @@ p {
   h1 {
     font-size: 2.5rem;
   }
-  
+
   h2 {
     font-size: 2rem;
   }
-  
+
+  /* Hero Section */
+  .hero {
+    padding: 60px 0px;
+  }
+
   .hero .container {
     flex-direction: column;
   }
-  
-  .hero-content, .hero-image {
+
+  .hero-content,
+  .hero-image {
     flex: none;
     width: 100%;
     text-align: center;
   }
-  
+
   .hero-content p {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .hero-buttons {
     justify-content: center;
   }
@@ -398,23 +414,24 @@ p {
   section {
     padding: 40px 0;
   }
-  
+
   h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 1.75rem;
   }
-  
-  .features-grid, .teams-carousel {
+
+  .features-grid,
+  .teams-carousel {
     grid-template-columns: 1fr;
   }
-  
+
   .testimonial-card {
     padding: 30px 20px;
   }
-  
+
   .testimonial-text {
     font-size: 1.1rem;
   }
