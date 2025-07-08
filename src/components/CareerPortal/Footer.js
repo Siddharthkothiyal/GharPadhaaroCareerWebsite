@@ -5,7 +5,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="portal-footer">
-      <div className="container">
+      <div className=" footer-container">
         <div className="footer-content">
           <div className="footer-section">
             <h4>GharPadharo Careers</h4>
