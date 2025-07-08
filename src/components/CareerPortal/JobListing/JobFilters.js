@@ -1,7 +1,7 @@
 import React from 'react';
 import './JobFilters.css';
 
-const JobFilters = ({ onFilterChange, filters }) => {
+const JobFilters = ({ onFilterChange, onClearAllFilters, filters }) => {
   const locations = [
     'All Locations',
     'Dehradun,Uttarakhand,India',
@@ -51,12 +51,7 @@ const JobFilters = ({ onFilterChange, filters }) => {
         <h3>Filters</h3>
         <button 
           className="clear-filters" 
-          onClick={() => {
-            onFilterChange('location', '');
-            onFilterChange('team', '');
-            onFilterChange('jobType', '');
-            onFilterChange('experience', '');
-          }}
+          onClick={onClearAllFilters} // Use the new function here
         >
           Clear All
         </button>

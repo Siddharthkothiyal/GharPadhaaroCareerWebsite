@@ -30,6 +30,16 @@ const CareerPortal = () => {
     });
   };
   
+  // Add this new function to clear all filters at once
+  const handleClearAllFilters = () => {
+    setFilters({
+      location: '',
+      team: '',
+      jobType: '',
+      experience: ''
+    });
+  };
+  
   const handleApplyNow = (job) => {
     setSelectedJob(job);
     setShowApplicationForm(true);
@@ -71,7 +81,11 @@ const CareerPortal = () => {
             <section className="job-search-section">
               <div className="container">
                 <div className="filters-and-results">
-                  <JobFilters onFilterChange={handleFilterChange} filters={filters} />
+                  <JobFilters 
+                    onFilterChange={handleFilterChange} 
+                    onClearAllFilters={handleClearAllFilters} 
+                    filters={filters} 
+                  />
                   <JobListings 
                     searchQuery={searchQuery} 
                     filters={filters} 
