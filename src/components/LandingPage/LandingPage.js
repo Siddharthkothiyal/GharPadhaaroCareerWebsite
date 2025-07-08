@@ -377,8 +377,8 @@ const LandingPage = () => {
               <div className="testimonial-author">
                 <div className="author-avatar"></div>
                 <div className="author-info">
-                  <h4>Alex Johnson</h4>
-                  <p>Senior Software Engineer, 3 years at GharPadharo</p>
+                  <h4>Siddharth Kothiyal</h4>
+                  <p>Software Developer, 1 year at GharPadharo</p>
                 </div>
               </div>
             </div>
