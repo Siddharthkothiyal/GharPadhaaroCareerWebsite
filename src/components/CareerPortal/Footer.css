@@ -4,12 +4,11 @@
   color: #f0f2f5;
   padding: 60px 0 30px;
   margin-top: 80px;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 40px;
   margin-bottom: 40px;
 }
@@ -93,53 +92,19 @@
   color: #b0b3b8;
 }
 
-.newsletter-form .btn-primary {
-  padding: 0 16px;
-  height: 45px;
-  background-color: var(--gharpadhaaro-blue, #0866ff);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.newsletter-form .btn-primary{
+  max-width: 90px;
+  background-color: white;
+  color: black;
+padding-left: 8px;
+height: 45px;
 }
 
-.newsletter-form .btn-primary:hover {
-  background-color: var(--gharpadhaaro-blue-dark, #0756d6);
-}
-
-/* Social Media Icons */
-.social-icons {
-  display: flex;
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.social-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background-color: #3a3b3c;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-  background-color: var(--gharpadhaaro-blue, #0866ff);
-  transform: translateY(-3px);
-}
-
-.social-icon i {
-  color: #ffffff;
-  font-size: 16px;
-}
 
 /* Footer Bottom */
 .footer-bottom {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -167,6 +132,15 @@
 .copyright {
   color: #b0b3b8;
   font-size: 14px;
+  margin-top: 20px;
+}
+
+.footer-container {
+  /* background-color: rgb(23, 23, 23); */
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Responsive */
@@ -175,14 +149,9 @@
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 30px;
   }
-  
+
   .newsletter-form {
     flex-direction: column;
-  }
-  
-  .newsletter-form .btn-primary {
-    width: 100%;
-    max-width: none;
   }
   
   .footer-bottom {
@@ -190,7 +159,7 @@
     gap: 16px;
     text-align: center;
   }
-  
+
   .footer-links {
     justify-content: center;
     gap: 12px;
