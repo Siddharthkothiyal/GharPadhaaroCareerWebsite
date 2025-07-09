@@ -1,5 +1,6 @@
 .job-application-form {
-  max-width: 800px;
+  /* max-width: 800px; */
+  width: 55vw;
   margin: 0 auto;
   padding: 30px;
   background-color: #fff;
@@ -161,13 +162,17 @@ input[type="file"] {
   width: 30%;
 }
 
-.application-form-btn{
+.application-form-btn {
   font-weight: 500;
 }
 
-.application-form-btn:hover{
+.application-form-btn:hover {
   background-color: #535699;
-  color : white;
+  color: white;
+}
+
+.the-job-application-form {
+  width: 65vw;
 }
 
 /* Mobile responsiveness */
@@ -176,14 +181,20 @@ input[type="file"] {
     font-size: 24px;
   }
 
+  .the-job-application-form {
+    width: 100vw;
+  }
+
+  .job-application-form {
+    padding: 10px;
+    width: 90vw;
+  }
+
   .form-row {
     flex-direction: column;
     gap: 0;
   }
 
-  .job-application-form {
-    padding: 20px;
-  }
 
   .form-actions {
     flex-direction: column-reverse;
@@ -210,4 +221,18 @@ input[type="file"] {
 
 .coverletter-section {
   margin: 20px 0px 0px 0px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+  .job-application-form {
+    width: 75vw;
+  }
+
+  .the-job-application-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+  }
 }

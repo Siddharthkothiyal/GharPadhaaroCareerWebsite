@@ -55,7 +55,7 @@ const CareerPortal = () => {
       <main className="career-portal-main">
         {showApplicationForm && selectedJob ? (
           <section className="application-form-section">
-            <div className="container">
+            <div className="container the-job-application-form">
               <button 
                 className="close-form-btn" 
                 onClick={handleCloseApplicationForm}
