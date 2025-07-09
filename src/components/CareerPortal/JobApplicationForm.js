@@ -74,14 +74,6 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
     }
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log('Application submitted:', formData);
-  //   // Here you would typically send the data to your backend
-  //   alert('Application submitted successfully!');
-  // };
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -120,7 +112,7 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
 
         if (result.status === "success") {
           alert("Application submitted successfully!");
-          console.log("Resume Link:", result.fileUrl);
+          // console.log("Resume Link:", result.fileUrl);
         } else {
           alert("Submission failed: " + result.message);
         }
