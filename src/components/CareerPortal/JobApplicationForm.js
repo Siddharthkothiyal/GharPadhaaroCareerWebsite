@@ -74,11 +74,63 @@ const JobApplicationForm = ({ jobId, jobTitle }) => {
     }
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log('Application submitted:', formData);
+  //   // Here you would typically send the data to your backend
+  //   alert('Application submitted successfully!');
+  // };
+
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Application submitted:', formData);
-    // Here you would typically send the data to your backend
-    alert('Application submitted successfully!');
+
+    if (!formData.resume) {
+      alert("Please upload a resume file");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = async () => {
+      const base64File = reader.result.split(",")[1]; // remove "data:...base64," part
+
+      const formPayload = new FormData();
+      formPayload.append("firstName", formData.firstName);
+      formPayload.append("lastName", formData.lastName);
+      formPayload.append("email", formData.email);
+      formPayload.append("phone", formData.phone);
+      formPayload.append("coverLetter", formData.coverLetter);
+      formPayload.append("linkedIn", formData.linkedIn);
+      formPayload.append("portfolio", formData.portfolio);
+      formPayload.append("experience", formData.experience);
+      formPayload.append("education", formData.education);
+      formPayload.append("skills", formData.skills);
+
+      formPayload.append("resume", base64File);
+      formPayload.append("resumeName", formData.resume.name);
+      formPayload.append("mimeType", formData.resume.type);
+
+      try {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbxyuN8qoNxwnHvA6kqDlIixKvtXf9pUCpG6zLc7lbhrbxHe8PGVpw0v8H9pRLeN8Xbj/exec", {
+          method: "POST",
+          body: formPayload,
+        });
+
+        const result = await response.json();
+
+        if (result.status === "success") {
+          alert("Application submitted successfully!");
+          console.log("Resume Link:", result.fileUrl);
+        } else {
+          alert("Submission failed: " + result.message);
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+        alert("Something went wrong. Please try again.");
+      }
+    };
+
+    reader.readAsDataURL(formData.resume); // triggers onload above
   };
 
   return (
